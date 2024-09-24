@@ -66,13 +66,8 @@ body {
         width: 80%;
 }
 
-.like {
+.like-count {
         color: #FFFFFF;
-        display: flex;
-        /* Alinha o botão de curtida e o número */
-        align-items: center;
-        /* Centraliza verticalmente */
-
 
 }
 

@@ -1,5 +1,5 @@
 const express = require('express');
-const { ObjectId } = require('mongodb'); // Importar ObjectId
+const { ObjectId } = require('mongodb');
 const router = express.Router();
 
 // Rota para exibir as mulheres na ciência
@@ -21,15 +21,13 @@ router.post('/like/:id', async (req, res) => {
   try {
     const collection = req.dbClient.collection('women_in_science');
 
-    // Atualiza a quantidade de curtidas
+    // Incrementa as curtidas e retorna o documento atualizado
     await collection.updateOne(
-      { _id: new ObjectId(id) }, // Usar ObjectId em vez de ObjectID
-      { $inc: { likes: 1 } } // Incrementa as curtidas
+      { _id: new ObjectId(id) },
+      { $inc: { likes: 1 } }
     );
 
-    res.status(200).send('Curtida atualizada');
-    console.log(`Curtindo mulher com ID: ${id}`); // No router.post
-
+    res.redirect('/'); // Redireciona de volta para a página principal
   } catch (error) {
     console.error('Erro ao atualizar curtidas:', error);
     res.status(500).send('Erro ao atualizar curtidas');

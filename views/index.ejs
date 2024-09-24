@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel='stylesheet' href='/stylesheets/index.css' />
-  <link rel="script" href="/javascripts/curtidas.js" />
+  <link rel="stylesheet" href="/stylesheets/index.css" />
   <title>Mulheres na Ciência</title>
 </head>
 
@@ -19,24 +18,19 @@
           <h4>
             <%= woman.name %>
           </h4>
-          <p class="like">
-            <button type="button" class="like-button" onclick="likeWoman('<%= woman._id %>', this)">❤️</button>
+          <form action="/like/<%= woman._id %>" method="POST">
+            <button type="submit" class="like-button">❤️</button>
             <span class="like-count">
               <%= woman.likes %>
             </span>
-          </p>
+          </form>
         </div>
         <p class="description">
           <%= woman.description %>
         </p>
-
       </div>
       <% }); %>
   </div>
-
-
-
-
 </body>
 
 </html>
