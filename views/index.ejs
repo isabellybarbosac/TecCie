@@ -1,20 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-  <title>
-    <%= title %>
-  </title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/index.css' />
+  <link rel="script" href="/javascripts/curtidas.js" />
+  <title>Mulheres na Ciência</title>
 </head>
 
 <body>
-  <%- include('./partials/header') %>
-    <h1>
-      <%= title %>
-    </h1>
-    <p>Welcome to <%= title %>
-    </p>
+  <h1>Mulheres que Fizeram História na Ciência</h1>
+  <div class="card-container">
+    <% women.forEach(woman=> { %>
+      <div class="card">
+        <img src="<%= woman.image %>" alt="<%= woman.name %>" class="card-image">
+        <div class="card-header">
+          <h4>
+            <%= woman.name %>
+          </h4>
+          <p class="like">
+            <button type="button" class="like-button" onclick="likeWoman('<%= woman._id %>', this)">❤️</button>
+            <span class="like-count">
+              <%= woman.likes %>
+            </span>
+          </p>
+        </div>
+        <p class="description">
+          <%= woman.description %>
+        </p>
+
+      </div>
+      <% }); %>
+  </div>
+
+
+
+
 </body>
 
 </html>

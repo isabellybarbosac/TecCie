@@ -1,0 +1,131 @@
+body {
+        font-family: 'Poppins', sans-serif;
+        /* Certifique-se de que a fonte Poppins esteja importada */
+        background-color: #E0D9EB;
+        /* Cor de fundo da página */
+        margin: 0;
+        padding: 20px;
+}
+
+.card {
+        background-color: #725C80;
+        /* Cor de fundo do card */
+        border: 1px solid #e0e0e0;
+        /* Borda do card */
+        border-radius: 8px;
+        /* Arredondamento dos cantos */
+        padding: 15px;
+        /* Espaçamento interno */
+        margin-bottom: 20px;
+        /* Espaçamento entre os cards */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        /* Sombra do card */
+        transition: transform 0.2s;
+        /* Efeito de transição ao passar o mouse */
+        width: 360px;
+        height: 370px;
+        display: flex;
+        /* Habilita o layout flexível */
+        flex-direction: column;
+        /* Alinha os itens na coluna */
+        align-items: center;
+        /* Centraliza horizontalmente */
+        justify-content: center;
+        /* Centraliza verticalmente */
+        text-align: center;
+        /* Centraliza o texto */
+
+}
+
+.card:hover {
+        transform: translateY(-5px);
+        /* Levanta o card ao passar o mouse */
+}
+
+.card h4 {
+
+        color: #FFFFFF;
+        /* Cor do título */
+        margin: 0;
+        /* Remove a margem do título */
+        flex: 1;
+        /* Faz o título ocupar o espaço restante */
+        display: flex;
+        /* Alinha o botão de curtida e o número */
+        align-items: center;
+        /* Centraliza verticalmente */
+
+}
+
+.description {
+        margin: 5px 0;
+        /* Margem para os parágrafos */
+        color: #311753;
+        /* Cor da descrição */
+        text-align: justify;
+        width: 80%;
+}
+
+.like {
+        color: #FFFFFF;
+        display: flex;
+        /* Alinha o botão de curtida e o número */
+        align-items: center;
+        /* Centraliza verticalmente */
+
+
+}
+
+.like-button {
+        background: none;
+        /* Sem fundo */
+        border: none;
+        /* Sem borda */
+        cursor: pointer;
+        /* Cursor de mão */
+        font-size: 24px;
+        /* Tamanho do coração */
+        color: red;
+        /* Cor do coração */
+}
+
+.like-button:hover {
+        color: darkred;
+        /* Cor ao passar o mouse */
+}
+
+.card-image {
+        padding: 20px;
+        width: 80%;
+        /* A imagem ocupará toda a largura do card */
+        height: 50%;
+        /* A altura será ajustada automaticamente para manter a proporção */
+        border-radius: 20px;
+        /* Arredondar o topo da imagem */
+}
+
+.card-container {
+        display: grid;
+        /* Habilita o layout de grid */
+        grid-template-columns: repeat(3, 1fr);
+        /* Três colunas de largura igual */
+        justify-content: center;
+        /* centraliza os itens horizontalmente */
+        max-width: 1200px;
+        /* largura máxima do contêiner */
+        margin: 0 auto;
+        /* centraliza o contêiner na página */
+        gap: 25px;
+        /* espaçamento entre os cards */
+
+}
+
+.card-header {
+        display: flex;
+        /* Usando flexbox para alinhar título e botão */
+        align-items: center;
+        /* Alinha verticalmente */
+        width: 80%;
+        /* Faz com que ocupe toda a largura do card */
+        padding-bottom: 5px;
+}

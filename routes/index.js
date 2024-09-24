@@ -1,9 +1,39 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const { ObjectId } = require('mongodb'); // Importar ObjectId
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+// Rota para exibir as mulheres na ciência
+router.get('/', async (req, res) => {
+  try {
+    const collection = req.dbClient.collection('women_in_science');
+    const women = await collection.find().toArray();
+    res.render('index', { women });
+  } catch (error) {
+    console.error('Erro ao buscar dados:', error);
+    res.status(500).send('Erro ao buscar dados');
+  }
+});
+
+// Rota para curtir
+router.post('/like/:id', async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    const collection = req.dbClient.collection('women_in_science');
+
+    // Atualiza a quantidade de curtidas
+    await collection.updateOne(
+      { _id: new ObjectId(id) }, // Usar ObjectId em vez de ObjectID
+      { $inc: { likes: 1 } } // Incrementa as curtidas
+    );
+
+    res.status(200).send('Curtida atualizada');
+    console.log(`Curtindo mulher com ID: ${id}`); // No router.post
+
+  } catch (error) {
+    console.error('Erro ao atualizar curtidas:', error);
+    res.status(500).send('Erro ao atualizar curtidas');
+  }
 });
 
 module.exports = router;
