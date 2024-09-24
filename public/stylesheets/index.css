@@ -4,6 +4,7 @@ body {
         background-color: #E0D9EB;
         /* Cor de fundo da página */
         margin: 0;
+        overflow-x: hidden;
 
 }
 
