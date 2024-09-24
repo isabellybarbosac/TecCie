@@ -2,7 +2,9 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const createError = require('http-errors');
 const { MongoClient, ObjectID } = require('mongodb');
+
 
 const uri = 'mongodb+srv://isabellybarbosa07:1709@progweb.ln502.mongodb.net/?retryWrites=true&w=majority&appName=ProgWeb';
 let db;
@@ -15,8 +17,9 @@ MongoClient.connect(uri)
   })
   .catch(error => console.error(error));
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var inicioRouter = require('./routes/inicio');
+var sobreRouter = require('./routes/sobre');
+var biografiasRouter = require('./routes/biografias');
 
 var app = express();
 
@@ -36,9 +39,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
+app.use('/', inicioRouter);
+app.use('/sobre', sobreRouter);
+app.use('/biografias', biografiasRouter);
 // catch 404 and forward to error handler
 app.use(function (_req, _res, next) {
   next(createError(404));

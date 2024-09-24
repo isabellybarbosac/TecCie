@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/stylesheets/inicio.css" />
+        <title>Início</title>
+</head>
+
+<body>
+        <%- include('./partials/header') %>
+                <p class="text1">Seja bem-vindo(a) ao espaço de mulheres inspiradoras que marcaram a ciência e
+                        tecnologia!</p>
+                <div class="carousel">
+                        <div class="carousel-slides">
+                                <div class="carousel-slide"><img src="/images/slide1.png" alt="Slide 1"></div>
+                                <div class="carousel-slide"><img src="/images/slide2.png" alt="Slide 2"></div>
+                                <div class="carousel-slide"><img src="/images/slide3.png" alt="Slide 3"></div>
+                        </div>
+
+                </div>
+
+                <img src="/images/ada.png" alt="AL" class="ada-img">
+                <p class="text2">
+                        Ao longo da história, muitas mulheres extraordinárias desafiaram barreiras e fizeram
+                        contribuições fundamentais para o avanço da ciência e tecnologia. Este site é uma homenagem às
+                        pioneiras cujas descobertas, inovações e pesquisas moldaram o mundo em que vivemos hoje.
+                        Aqui, você encontrará cientistas, engenheiras, matemáticas e tecnólogas que abriram caminhos e
+                        continuam a inspirar gerações futuras. Explore suas conquistas e descubra como elas mudaram o
+                        curso da história!
+                </p>
+                <a href="/biografias">
+                        <button class="pioneiras">Conheça as pioneiras! Clique aqui.</button>
+                </a>
+                <img src="/images/marie.png" alt="MR" class="marie-img">
+                <footer>
+                        <%- include('./partials/footer') %>
+
+                </footer>
+
+</body>
+
+</html>

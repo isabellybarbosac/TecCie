@@ -4,7 +4,7 @@ body {
         background-color: #E0D9EB;
         /* Cor de fundo da página */
         margin: 0;
-        padding: 20px;
+
 }
 
 .card {
@@ -78,9 +78,9 @@ body {
         /* Sem borda */
         cursor: pointer;
         /* Cursor de mão */
-        font-size: 24px;
+        font-size: 18px;
         /* Tamanho do coração */
-        color: red;
+        color: rgb(140, 33, 167);
         /* Cor do coração */
 }
 
@@ -90,13 +90,13 @@ body {
 }
 
 .card-image {
+        display: flex;
         padding: 20px;
         width: 80%;
         /* A imagem ocupará toda a largura do card */
         height: 50%;
         /* A altura será ajustada automaticamente para manter a proporção */
-        border-radius: 20px;
-        /* Arredondar o topo da imagem */
+
 }
 
 .card-container {
@@ -123,4 +123,20 @@ body {
         width: 80%;
         /* Faz com que ocupe toda a largura do card */
         padding-bottom: 5px;
+}
+
+.frase {
+        display: flex;
+        font-family: 'JetBrains Mono', sans-serif;
+        padding: 25px;
+        width: 80%;
+        /* Ajuste a largura conforme necessário */
+        margin-left: 300px;
+        /* Centraliza o parágrafo no contêiner pai */
+        text-align: center;
+        /* Centraliza o texto */
+}
+
+.like-button img {
+        width: 20px;
 }

@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   try {
     const collection = req.dbClient.collection('women_in_science');
     const women = await collection.find().toArray();
-    res.render('index', { women });
+    res.render('biografias', { women });
   } catch (error) {
     console.error('Erro ao buscar dados:', error);
     res.status(500).send('Erro ao buscar dados');
@@ -27,7 +27,7 @@ router.post('/like/:id', async (req, res) => {
       { $inc: { likes: 1 } }
     );
 
-    res.redirect('/'); // Redireciona de volta para a página principal
+    res.redirect('/biografias'); // Redireciona de volta para a página principal
   } catch (error) {
     console.error('Erro ao atualizar curtidas:', error);
     res.status(500).send('Erro ao atualizar curtidas');
