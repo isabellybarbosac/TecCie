@@ -14,10 +14,10 @@ function isAuthenticated(req, res, next) {
 // Rota para visualizar as sugestões, protegida pelo middleware
 router.get('/', isAuthenticated, async function (req, res, next) {
         const collection = req.dbClient.collection('SugestoesTecCie');
-
         try {
                 const suges = await collection.find({}).toArray();
-                res.render('sugestoes', { suges });
+                res.render('sugestoes', { suges }
+                );
         } catch (err) {
                 next(err);
         }
