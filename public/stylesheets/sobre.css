@@ -23,12 +23,18 @@ body {
         font-size: 20px;
 }
 
-.marie-img {
+
+
+.slide {
         position: absolute;
-        top: 288px;
-        right: 0;
-        width: 250px;
-        height: auto;
-        padding: 0;
-        display: block;
+        padding-left: 850px;
+        display: flex;
+        top: 115px;
+}
+
+h3 {
+        color: #29193F;
+        font-family: Arial, Helvetica, sans-serif;
+
+        margin: 80px;
 }

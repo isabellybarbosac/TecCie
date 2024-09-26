@@ -62,7 +62,7 @@ router.post('/login', async (req, res) => {
                 if (user.isAdmin) {
                         res.redirect('/biografias/admin');
                 } else {
-                        res.redirect('/biografias');
+                        res.redirect('/');
                 }
         } catch (error) {
                 console.error('Erro ao fazer login:', error);

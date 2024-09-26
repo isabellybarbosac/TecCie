@@ -6,6 +6,7 @@ function isAuthenticated(req, res, next) {
         if (req.session.user) {
                 return next(); // Se o usuário estiver autenticado, prossiga
         } else {
+                req.session.redirectTo = req.originalUrl;
                 res.redirect('/auth/login'); // Redireciona para a página de login se não estiver autenticado
         }
 }
