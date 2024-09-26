@@ -60,9 +60,9 @@ router.post('/login', async (req, res) => {
 
                 // Após autenticação bem-sucedida
                 if (user.isAdmin) {
-                        res.redirect('/biografias/admin'); // Redireciona para o formulário de gerenciamento
+                        res.redirect('/biografias/admin');
                 } else {
-                        res.redirect('/'); // Para usuários normais
+                        res.redirect('/biografias');
                 }
         } catch (error) {
                 console.error('Erro ao fazer login:', error);
@@ -76,7 +76,7 @@ router.get('/logout', (req, res) => {
                 if (err) {
                         return res.status(500).send('Erro ao fazer logout');
                 }
-                res.redirect('/auth/login'); // Redireciona para a página de login após logout
+                res.redirect('/auth/login');
         });
 });
 

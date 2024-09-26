@@ -14,6 +14,7 @@ function isAuthenticated(req, res, next) {
         if (req.session.user) {
                 return next(); // Usuário está logado, prossegue
         }
+        req.session.redirectTo = req.originalUrl; // Salva a URL original antes do login
         res.redirect('/auth/login'); // Usuário não está logado, redireciona para login
 }
 
