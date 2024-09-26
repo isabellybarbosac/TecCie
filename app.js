@@ -5,7 +5,7 @@ const session = require('express-session');
 const logger = require('morgan');
 const createError = require('http-errors');
 const { MongoClient, ObjectID } = require('mongodb');
-
+const methodOverride = require('method-override');
 
 
 const uri = 'mongodb+srv://isabellybarbosa07:1709@progweb.ln502.mongodb.net/?retryWrites=true&w=majority&appName=ProgWeb';
@@ -28,6 +28,8 @@ var sugestoesRouter = require('./routes/sugestoes');
 
 
 var app = express();
+
+app.use(methodOverride('_method'));
 
 // Middleware para tornar o db acessível nas rotas
 app.use((req, res, next) => {

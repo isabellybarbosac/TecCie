@@ -27,7 +27,7 @@
         </form>
 
         <h2>Edite um card aqui:</h2>
-        <form action="/biografias/edit" method="PUT">
+        <form action="/biografias/edit" method="POST">
                 <label for="editName">Nome da Mulher a Editar:</label>
                 <input type="text" id="editName" name="name" required>
 
@@ -37,15 +37,18 @@
                 <label for="editImage">Nova URL da Imagem:</label>
                 <input type="text" id="editImage" name="image" required>
 
+                <!-- O hidden _method deve ser enviado no mesmo formulário -->
+                <input type="hidden" name="_method" value="PUT">
+
                 <button type="submit">Editar</button>
         </form>
 
 
         <h2>Delete um card aqui:</h2>
-        <form action="/biografias/delete" method="DELETE">
+        <form action="/biografias/delete" method="POST">
                 <label for="deleteName">Nome da Mulher a Deletar:</label>
                 <input type="text" id="deleteName" name="name" required>
-
+                <input type="hidden" name="_method" value="DELETE"> <!-- Campo oculto para indicar DELETE -->
                 <button type="submit">Deletar</button>
         </form>
 </body>

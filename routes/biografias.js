@@ -1,7 +1,7 @@
 const express = require('express');
 const { ObjectId } = require('mongodb');
 const router = express.Router();
-const { isAdmin } = require('../middleware/middleware');  // Importa o middleware
+const { isAdmin } = require('../middleware/middleware');
 const { isAuthenticated } = require('../middleware/middleware'); // Importa o middleware
 
 
@@ -54,38 +54,44 @@ router.post('/add', isAdmin, async (req, res) => {
   }
 });
 
-// Rota para editar uma mulher pelo nome (somente admin)
-router.put('/edit/:name', isAdmin, async (req, res) => {
-  const name = req.params.name;
-  const { description, image } = req.body;
+router.post('/edit', isAdmin, async (req, res) => {
+  const { name, description, image } = req.body;
 
   try {
     const collection = req.dbClient.collection('women_in_science');
-    await collection.updateOne(
-      { name: name },
-      { $set: { description, image } }
+    const result = await collection.updateOne(
+      { name: name }, // Filtra pela mulher a ser editada
+      { $set: { description: description, image: image } } // Atualiza os campos
     );
-    res.send(`Mulher ${name} atualizada com sucesso!`);
+
+    if (result.matchedCount === 0) {
+      return res.status(404).send(`Mulher ${name} não encontrada!`);
+    }
+
+    res.send(`Mulher ${name} editada com sucesso!`);
   } catch (error) {
     console.error('Erro ao editar mulher:', error);
     res.status(500).send('Erro ao editar mulher');
   }
 });
-
 // Rota para deletar uma mulher pelo nome (somente admin)
-router.delete('/delete/:name', isAdmin, async (req, res) => {
-  const name = req.params.name;
+router.post('/delete', isAdmin, async (req, res) => {
+  const name = req.body.name; // Obtenha o nome do corpo da requisição
 
   try {
     const collection = req.dbClient.collection('women_in_science');
-    await collection.deleteOne({ name: name });
+    const result = await collection.deleteOne({ name: name });
+
+    if (result.deletedCount === 0) {
+      return res.status(404).send(`Mulher ${name} não encontrada!`);
+    }
+
     res.send(`Mulher ${name} deletada com sucesso!`);
   } catch (error) {
     console.error('Erro ao deletar mulher:', error);
     res.status(500).send('Erro ao deletar mulher');
   }
 });
-
 // Rota para exibir o formulário de gerenciamento de cards (somente admin)
 router.get('/admin', isAdmin, (req, res) => {
   res.render('admin_form'); // Crie uma nova view chamada admin_form.ejs
