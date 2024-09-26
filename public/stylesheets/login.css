@@ -1,0 +1,70 @@
+body {
+        height: 100vh;
+        /* Altura total da janela */
+        margin: 0;
+        /* Remove margens padrão */
+        background: linear-gradient(to right, #1D192B 50%, #E0D9EB 50%);
+        /* 50% verde, 50% roxo */
+        font-family: 'JetBrains Mono', sans-serif;
+
+}
+
+h1 {
+        color: #ffffff;
+        padding-left: 250px;
+        padding-top: 150px;
+}
+
+.teste {
+        color: #ffffff;
+        padding-left: 220px;
+
+}
+
+.senha {
+        color: #ffffff;
+        padding-left: 220px;
+
+
+}
+
+.botao {
+
+        background-color: #E0D9EB;
+        /* Cor de fundo roxa para o botão */
+        color: rgb(55, 6, 75);
+        border: 1px solid rgb(55, 6, 75);
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        width: 100px;
+        height: 35px;
+        margin-left: 250px;
+
+}
+
+.test {
+        color: #ffffff;
+        padding-left: 200px;
+
+}
+
+a {
+        color: #ffffff;
+        padding-left: 52px;
+
+
+
+}
+
+.login-img {
+        padding-left: 1000px;
+        width: 90px;
+        height: auto;
+        position: relative;
+        top: -200px;
+        /* Move a imagem 20px para cima */
+
+}

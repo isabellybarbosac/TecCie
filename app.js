@@ -7,6 +7,7 @@ const createError = require('http-errors');
 const { MongoClient, ObjectID } = require('mongodb');
 
 
+
 const uri = 'mongodb+srv://isabellybarbosa07:1709@progweb.ln502.mongodb.net/?retryWrites=true&w=majority&appName=ProgWeb';
 let db;
 
@@ -22,6 +23,8 @@ var inicioRouter = require('./routes/inicio');
 var sobreRouter = require('./routes/sobre');
 var biografiasRouter = require('./routes/biografias');
 var authRouter = require('./routes/auth');
+var adminRouter = require('./routes/admin');
+var sugestoesRouter = require('./routes/sugestoes');
 
 
 var app = express();
@@ -56,6 +59,8 @@ app.use('/', inicioRouter);
 app.use('/sobre', sobreRouter);
 app.use('/biografias', biografiasRouter);
 app.use('/auth', authRouter);
+app.use('/admin', adminRouter);
+app.use('/sugestoes', sugestoesRouter);
 
 
 // catch 404 and forward to error handler
