@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const session = require('express-session');
 const logger = require('morgan');
 const createError = require('http-errors');
 const { MongoClient, ObjectID } = require('mongodb');
@@ -20,6 +21,8 @@ MongoClient.connect(uri)
 var inicioRouter = require('./routes/inicio');
 var sobreRouter = require('./routes/sobre');
 var biografiasRouter = require('./routes/biografias');
+var authRouter = require('./routes/auth');
+
 
 var app = express();
 
@@ -33,6 +36,16 @@ app.use((req, res, next) => {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(session({
+  secret: 'segredo',  // substitua por um segredo forte em produção
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    secure: false  // use secure: true quando estiver usando HTTPS
+  }
+}));
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -42,6 +55,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', inicioRouter);
 app.use('/sobre', sobreRouter);
 app.use('/biografias', biografiasRouter);
+app.use('/auth', authRouter);
+
+
 // catch 404 and forward to error handler
 app.use(function (_req, _res, next) {
   next(createError(404));

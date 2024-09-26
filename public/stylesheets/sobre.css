@@ -1,0 +1,24 @@
+body {
+        font-family: 'Poppins', sans-serif;
+        /* Certifique-se de que a fonte Poppins esteja importada */
+        background-color: #E0D9EB;
+        /* Cor de fundo da página */
+        margin: 0;
+        overflow-x: hidden;
+
+}
+
+.pergunta {
+        color: #29193F;
+        padding-left: 200px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+}
+
+.about {
+        padding-left: 200px;
+        width: 40%;
+        padding-bottom: 25px;
+        font-size: 20px;
+}
