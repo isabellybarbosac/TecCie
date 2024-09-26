@@ -22,3 +22,13 @@ body {
         padding-bottom: 25px;
         font-size: 20px;
 }
+
+.marie-img {
+        position: absolute;
+        top: 288px;
+        right: 0;
+        width: 250px;
+        height: auto;
+        padding: 0;
+        display: block;
+}

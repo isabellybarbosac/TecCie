@@ -9,10 +9,10 @@
 </head>
 
 <body>
-        <h1>Gerenciar Cards das Mulheres na Ciência</h1>
+        <h1>Gerenciamento de cards - TecCie</h1>
+        <h3>Olá, admin!</h3>
 
-        <!-- Formulário para adicionar uma nova mulher -->
-        <h2>Adicionar Mulher</h2>
+        <h2>Adicione um card aqui:</h2>
         <form action="/biografias/add" method="POST">
                 <label for="name">Nome:</label>
                 <input type="text" id="name" name="name" required>
@@ -26,8 +26,7 @@
                 <button type="submit">Adicionar</button>
         </form>
 
-        <!-- Formulário para editar uma mulher -->
-        <h2>Editar Mulher</h2>
+        <h2>Edite um card aqui:</h2>
         <form action="/biografias/edit" method="PUT">
                 <label for="editName">Nome da Mulher a Editar:</label>
                 <input type="text" id="editName" name="name" required>
@@ -41,8 +40,8 @@
                 <button type="submit">Editar</button>
         </form>
 
-        <!-- Formulário para deletar uma mulher -->
-        <h2>Deletar Mulher</h2>
+
+        <h2>Delete um card aqui:</h2>
         <form action="/biografias/delete" method="DELETE">
                 <label for="deleteName">Nome da Mulher a Deletar:</label>
                 <input type="text" id="deleteName" name="name" required>
