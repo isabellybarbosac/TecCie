@@ -1,21 +1,20 @@
 // middleware.js
 
-// Middleware para verificar se o usuário é admin
 function isAdmin(req, res, next) {
         if (req.session.user && req.session.user.isAdmin) {
-                next(); // Usuário é admin, prossegue para a rota
+                next();
         } else {
-                res.status(403).send('Acesso negado.'); // Usuário não é admin
+                res.status(403).send('Acesso negado.');
         }
 }
 
-// Middleware para verificar se o usuário está autenticado
+
 function isAuthenticated(req, res, next) {
         if (req.session.user) {
-                return next(); // Usuário está logado, prossegue
+                return next();
         }
-        req.session.redirectTo = req.originalUrl; // Salva a URL original antes do login
-        res.redirect('/auth/login'); // Usuário não está logado, redireciona para login
+        req.session.redirectTo = req.originalUrl;
+        res.redirect('/auth/login');
 }
 
 module.exports = {

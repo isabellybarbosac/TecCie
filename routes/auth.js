@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt'); // para criptografar a senha
-const { isAdmin } = require('../middleware/middleware');  // Importa o middleware
+const bcrypt = require('bcrypt');
+const { isAdmin } = require('../middleware/middleware');
 
 
 // Rota para cadastro de usuário
@@ -9,7 +9,7 @@ router.post('/register', async (req, res) => {
         const { username, password } = req.body;
         const db = req.dbClient;
 
-        // Validações simples
+
         if (username.length < 3) {
                 return res.status(400).send('Nome de usuário deve ter pelo menos 3 caracteres');
         }
@@ -37,7 +37,7 @@ router.post('/register', async (req, res) => {
         }
 });
 
-// Rota para login de usuário
+
 router.post('/login', async (req, res) => {
         const { username, password } = req.body;
         const db = req.dbClient;
@@ -55,10 +55,10 @@ router.post('/login', async (req, res) => {
                         return res.status(400).send('Usuário ou senha inválidos');
                 }
 
-                // Armazena o usuário na sessão após o login
+
                 req.session.user = user;
 
-                // Após autenticação bem-sucedida
+
                 if (user.isAdmin) {
                         res.redirect('/biografias/admin');
                 } else {

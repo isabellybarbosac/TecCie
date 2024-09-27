@@ -2,7 +2,7 @@ const express = require('express');
 const { ObjectId } = require('mongodb');
 const router = express.Router();
 const { isAdmin } = require('../middleware/middleware');
-const { isAuthenticated } = require('../middleware/middleware'); // Importa o middleware
+const { isAuthenticated } = require('../middleware/middleware');
 
 
 
