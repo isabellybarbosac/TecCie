@@ -1,4 +1,4 @@
-# ![TecCie](https://github.com/user-attachments/assets/ca260bea-dbc5-4580-957a-2128d4b65c5c)  ![TecCie](https://github.com/user-attachments/assets/ca260bea-dbc5-4580-957a-2128d4b65c5c) ![TecCie](https://github.com/user-attachments/assets/ca260bea-dbc5-4580-957a-2128d4b65c5c) ![TecCie](https://github.com/user-attachments/assets/ca260bea-dbc5-4580-957a-2128d4b65c5c) ![TecCie](https://github.com/user-attachments/assets/ca260bea-dbc5-4580-957a-2128d4b65c5c)
+# ![TecCie](https://github.com/user-attachments/assets/ca260bea-dbc5-4580-957a-2128d4b65c5c)  ![TecCie](https://github.com/user-attachments/assets/ca260bea-dbc5-4580-957a-2128d4b65c5c) ![TecCie](https://github.com/user-attachments/assets/ca260bea-dbc5-4580-957a-2128d4b65c5c) ![TecCie](https://github.com/user-attachments/assets/ca260bea-dbc5-4580-957a-2128d4b65c5c) 
 
 
  🌟 *Bem-vindo ao **TecCie**! Este projeto tem como objetivo destacar as mulheres que contribuíram e fizeram história na ciência e tecnologia, trazendo mais visibilidade às suas importantes descobertas e realizações.*
