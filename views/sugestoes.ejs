@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/stylesheets/sugestoes.css" />
+        <title>Sugestões</title>
+</head>
+
+
+
+
+<body>
+        <%- include('./partials/header') %>
+
+                <div class="container">
+                        <p class="text">
+                                Olá, estamos sempre buscando maneiras de melhorar e oferecer a melhor experiência
+                                possível.
+                                Suas
+                                sugestões e
+                                comentários são fundamentais para nós! Por favor, compartilhe suas ideias, críticas ou
+                                elogios.
+                                Juntos,
+                                podemos fazer este espaço ainda melhor. Clique aqui para adicionar um comentário!
+
+                        </p>
+                        <div class="suggestion-list">
+                                <h2>Confira algumas sugestões que estão sendo analisadas:</h2>
+                                <ul>
+                                        <% suges.forEach(function(sugestao) { %>
+                                                <li>
+                                                        <%= sugestao.sugestao %>
+                                                </li>
+                                                <% }); %>
+                                </ul>
+                        </div>
+                        <h2 class="titu1">Sua opinião é importante!</h2>
+                        <div class="sugestaoform">
+                                <form action="/sugestoes" method="POST">
+                                        <textarea name="suges" placeholder="Escreva sua sugestão aqui..."
+                                                required></textarea>
+                                        <button type="submit">Enviar</button>
+                                </form>
+                        </div>
+
+
+                </div>
+
+
+                <%- include('./partials/footer') %>
+
+</body>
+
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/stylesheets/register.css" />
+        <title>Cadastro</title>
+</head>
+
+<body>
+        <h1>CADASTRO</h1>
+        <form action="/auth/register" method="POST">
+                <div class="teste">
+                        <label class="oi" for="username">Nome de Usuário:</label>
+                        <br>
+                        <input class="oi" type="text" name="username" required>
+                </div>
+                <br>
+                <div class="senha">
+                        <label class="oi" for="password">Senha:</label>
+                        <br>
+                        <input class="oi" type="password" name="password" required>
+                </div>
+                <br>
+                <button class="botao" type="submit">Cadastrar</button>
+                <br>
+
+        </form>
+        <div class="test">
+                <p>Já tem uma conta? <a href="/auth/login">Faça login aqui</a></p>
+
+        </div>
+        <img src="/images/login.png" alt="login" class="login-img">
+
+</body>
+
+</html>

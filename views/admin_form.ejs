@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gerenciar Cards</title>
+        <link rel="stylesheet" href="/stylesheets/admin_form.css"> <!-- Estilo opcional -->
+</head>
+
+<body>
+        <h1>Gerenciamento de cards - TecCie</h1>
+        <h3>Olá, admin!</h3>
+
+        <h2>Adicione um card aqui:</h2>
+        <form action="/biografias/add" method="POST">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="description">Descrição:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <label for="image">URL da Imagem:</label>
+                <input type="text" id="image" name="image" required>
+
+                <button type="submit">Adicionar</button>
+        </form>
+
+        <h2>Edite um card aqui:</h2>
+        <form action="/biografias/edit" method="POST">
+                <label for="editName">Nome da Mulher a Editar:</label>
+                <input type="text" id="editName" name="name" required>
+
+                <label for="editDescription">Nova Descrição:</label>
+                <textarea id="editDescription" name="description" required></textarea>
+
+                <label for="editImage">Nova URL da Imagem:</label>
+                <input type="text" id="editImage" name="image" required>
+
+                <!-- O hidden _method deve ser enviado no mesmo formulário -->
+                <input type="hidden" name="_method" value="PUT">
+
+                <button type="submit">Editar</button>
+        </form>
+
+
+        <h2>Delete um card aqui:</h2>
+        <form action="/biografias/delete" method="POST">
+                <label for="deleteName">Nome da Mulher a Deletar:</label>
+                <input type="text" id="deleteName" name="name" required>
+                <input type="hidden" name="_method" value="DELETE"> <!-- Campo oculto para indicar DELETE -->
+                <button type="submit">Deletar</button>
+        </form>
+</body>
+
+</html>

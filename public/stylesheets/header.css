@@ -1,0 +1,36 @@
+* {
+        padding: 0;
+        margin: 0;
+        font-family: 'Poppins', monospace;
+
+}
+
+nav {
+        background: #5A2D82;
+}
+
+.nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+}
+
+.logo img {
+        height: 60px;
+        width: auto;
+        padding-left: 35px;
+}
+
+.pags a {
+        color: #ffffff;
+        padding-right: 35px;
+        text-decoration: none;
+
+}
+
+.entrar-btn img {
+        padding-right: 5px;
+        width: 80px;
+        height: 38px;
+}

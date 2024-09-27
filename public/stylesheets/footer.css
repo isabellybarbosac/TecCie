@@ -1,0 +1,38 @@
+footer {
+        background-color: #5A2D82;
+        /* Cor de fundo */
+        /* Espaçamento interno */
+        text-align: center;
+        /* Centraliza o texto */
+
+        /* Pode ser absoluto ou fixo, dependendo do seu layout */
+        bottom: 0;
+        /* Para fixá-lo na parte inferior */
+        width: 100%;
+        /* Para ocupar toda a largura da tela */
+
+}
+
+footer ul {
+        list-style-type: none;
+        padding: 20px;
+
+}
+
+footer ul li {
+        display: inline;
+        /* Coloca os itens em linha */
+        margin: 0 20px;
+        /* Espaçamento entre os itens */
+}
+
+footer a {
+        text-decoration: none;
+        color: #ffffff;
+
+}
+
+footer a:hover {
+        text-decoration: underline;
+
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/stylesheets/login.css" />
+        <title>Login</title>
+</head>
+
+<body>
+        <h1>LOGIN</h1>
+        <form action="/auth/login" method="POST">
+                <div class="teste">
+                        <label for="username">Nome de Usuário:</label>
+                        <br>
+                        <input class="oi" type="text" name="username" required>
+                </div>
+                <br>
+                <div class="senha">
+                        <label for="password">Senha:</label>
+                        <br>
+                        <input class="oi" type="password" name="password" required>
+                </div>
+
+                <br>
+
+                <button class="botao" type="submit">Entrar</button>
+
+
+        </form>
+        <div class="test">
+                <p>Ainda não tem uma conta? <a href="/auth/register">Registre-se</a></p>
+
+        </div>
+        <img src="/images/loginCerto.png" alt="login" class="login-img">
+
+</body>
+
+</html>

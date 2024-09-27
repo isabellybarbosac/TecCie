@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/index.css" />
+  <title>TecCie</title>
+</head>
+
+<body>
+  <%- include('./partials/header') %>
+    <p class="frase">Olá TecCie woman, ficamos felizes em ver que você está explorando nosso projeto!<br>
+      Fique a vontade para vizualizar e interagir conosco.</p>
+    <div class="card-container">
+      <% womeen.forEach(woman=> { %>
+        <div class="card">
+          <img src="<%= woman.image %>" alt="<%= woman.name %>" class="card-image">
+          <div class="card-header">
+            <h4>
+              <%= woman.name %>
+            </h4>
+            <form action="/biografias/like/<%= woman._id %>" method="POST">
+              <button type="submit" class="like-button">
+                <img src="/images/coração.png" alt="Curtir" class="heart-image">
+              </button>
+              <span class="like-count">
+                <%= woman.likes %>
+              </span>
+            </form>
+          </div>
+          <p class="description">
+            <%= woman.description %>
+          </p>
+        </div>
+        <% }); %>
+    </div>
+
+</body>
+<%- include('./partials/footer') %>
+
+</html>
