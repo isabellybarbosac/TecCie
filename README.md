@@ -1,6 +1,7 @@
-## ![TecCie](https://github.com/user-attachments/assets/ca260bea-dbc5-4580-957a-2128d4b65c5c) <br>Mulheres na Ciência e Tecnologia
+# ![TecCie](https://github.com/user-attachments/assets/ca260bea-dbc5-4580-957a-2128d4b65c5c)  ![TecCie](https://github.com/user-attachments/assets/ca260bea-dbc5-4580-957a-2128d4b65c5c) ![TecCie](https://github.com/user-attachments/assets/ca260bea-dbc5-4580-957a-2128d4b65c5c) ![TecCie](https://github.com/user-attachments/assets/ca260bea-dbc5-4580-957a-2128d4b65c5c) ![TecCie](https://github.com/user-attachments/assets/ca260bea-dbc5-4580-957a-2128d4b65c5c)
 
-Bem-vindo ao **TecCie**! Este projeto tem como objetivo destacar as mulheres que contribuíram e fizeram história na ciência e tecnologia, trazendo mais visibilidade às suas importantes descobertas e realizações.
+
+ 🌟 *Bem-vindo ao **TecCie**! Este projeto tem como objetivo destacar as mulheres que contribuíram e fizeram história na ciência e tecnologia, trazendo mais visibilidade às suas importantes descobertas e realizações.*
 
 ### 📖 Temática:
 
@@ -27,3 +28,5 @@ Dessa necessidade de dar mais visibilidade às mulheres na ciência e tecnologia
 ### 📚 Conhecimento é poder!
 
 Participe dessa jornada e ajude a construir um futuro onde a **visibilidade** das contribuições femininas seja igualitário.
+
+
