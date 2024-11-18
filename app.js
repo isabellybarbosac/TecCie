@@ -8,7 +8,7 @@ const { MongoClient, ObjectID } = require('mongodb');
 const methodOverride = require('method-override');
 
 
-const uri = 'mongodb+srv://isabellybarbosa07:1709@progweb.ln502.mongodb.net/?retryWrites=true&w=majority&appName=ProgWeb';
+const uri = 'mongodb+srv://isabellybarbosa07:****@progweb.ln502.mongodb.net/?retryWrites=true&w=majority&appName=ProgWeb';
 let db;
 
 // Conectando ao MongoDB
